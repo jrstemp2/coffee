@@ -1,27 +1,31 @@
-﻿
+﻿@model CoffeeShop.Models.UserInfo
+
 @{
     ViewData["Title"] = "RegisterIndex";
 }
 
 <h1>Register Here</h1>
+@{
+    if (ViewData["errorMsg"] != null)
+    {
+        <p><strong>@ViewData["errorMsg"]</strong></p>
+    }
+}
 
-<form action="/Register/Register" method="post">
-    
-    <label>First Name</label>
-    <input type="text" name="fname" maxlength="20" required />
-    <label>Last Name</label>
-    <input type="text" name="lname" maxlength="20" required />
-    <label>Email</label>
-    <input type="email" name="email" required />
-    <label>Password</label>
-    <input type="password" name="password" maxlength="20" required />
+<form asp-controller="Register" asp-action="Register" method="post">
+    <label>First Name: </label><input asp-for="FirstName" maxlength="20" /><br />
+    <label>Last Name: </label><input asp-for="LastName" maxlength="20" /><br />
+    <label>Email: </label><input type="email" asp-for="Email" /><br />
+    <label>Password(Min 8 Character):</label><input type="password" asp-for="Password" maxlength="20" required />
+    <label>Re-Enter Password(Min 8 Character):</label><input type="password" asp-for="Password2" maxlength="20" required />
+    <label>Birth Date:</label><input type="date" asp-for="BirthDate" required />
     <label>May we email you about new offers?</label>
-    <select name="offers">
+    <select asp-for="Offers">
         <option>Yes</option>
         <option>No</option>
     </select>
     <br />
-
+    <br />
     <input type="submit" value="Register Now!" />
 
 </form>

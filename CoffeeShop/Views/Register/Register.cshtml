@@ -1,12 +1,31 @@
 ﻿
+
 @{
     ViewData["Title"] = "Register";
 }
 
-<h1>Welcome @ViewData["name"]</h1>
+<h1>Welcome @Model.FirstName @Model.LastName</h1>
+<p>Thank you for joining Coffee Perks!</p>
+<p>Your User Information is as follow:</p>
+<div>
+    <ul>
+        <li>
+            User Name: @Model.UserName
+        </li>
+        <li>
+            Primary Email Address: @Model.Email
+        </li>
+        <li>
+            Birthday: @Model.BirthDate
+        </li>
+        <li>
+            Receive Emails: @Model.Offers
+        </li>
 
-Thank you @ViewData["name"] for becoming a memeber of the Coffee Perks Club . Your information is as follows:<br />
-Username: @ViewData["username"] <br /> 
-Email Address: @ViewData["email"]<br />
-@ViewData["offers"] to receiving emails
+    </ul>
+   
+    
+
+</div>
+
 

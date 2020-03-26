@@ -109,3 +109,4 @@ C:\Users\JSTEMPOWSKI\OneDrive - Knex\Desktop\CoffeeShop\CoffeeShop\obj\Debug\net
 C:\Users\JSTEMPOWSKI\OneDrive - Knex\Desktop\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\Razor\Views\Register.cshtml.g.cs
 C:\Users\JSTEMPOWSKI\OneDrive - Knex\Desktop\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\Razor\Views\Register\RegisterIndex.cshtml.g.cs
 C:\Users\JSTEMPOWSKI\OneDrive - Knex\Desktop\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\Razor\Views\Register\Register.cshtml.g.cs
+C:\Users\JSTEMPOWSKI\OneDrive - KNEX\Desktop\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\Razor\Views\Order\OrderIndex.cshtml.g.cs

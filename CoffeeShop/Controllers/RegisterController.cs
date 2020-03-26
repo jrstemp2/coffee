@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CoffeeShop.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoffeeShop.Controllers
@@ -13,14 +14,32 @@ namespace CoffeeShop.Controllers
             return View("RegisterIndex");
         }
         [HttpPost]
-        public IActionResult Register(string fname, string lname, string email, string password, string offers)
+        [ValidateAntiForgeryToken]
+        public IActionResult Register(UserInfo user)
         {
-            ViewData["name"] = fname + " " + lname;
-            ViewData["email"] = email;
-            ViewData["offers"] = offers;
-            ViewData["password"] = password;
-            ViewData["username"] = fname[0] + lname;
-            return View();
+            if (ModelState.IsValid)
+            {
+                if (user.Password == user.Password2)
+                {
+                    string uName = (string)(user.FirstName[0] + user.LastName);
+                    user.UserName = uName;
+                    return View(user);
+                }
+                else
+                {
+                    ViewData["errorMsg"] = "Your Passwrods do not match";
+                    return View("RegisterIndex", user);//redirects to index blank.
+                }
+            }
+            else
+            {
+                ViewData["errorMsg"] = "Your form has errors";
+                return View("RegisterIndex", user);//redirects to index blank.
+            }
         }
+        //public IActionResult Order()
+        //{
+
+        //}
     }
 }

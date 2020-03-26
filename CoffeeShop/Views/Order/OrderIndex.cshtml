@@ -1,0 +1,20 @@
+﻿@model CoffeeShop.Models.UserOrder
+
+@{
+    ViewData["Title"] = "OrderIndex";
+}
+
+<h1>OrderIndex</h1>
+
+<form asp-controller="Order" asp-action="Order">
+    <select asp-for="CoffeeOrder">
+        @{
+            string[] coffeeTypes = MenuItems.CoffeeType;
+            foreach (String c in coffeeTypes)
+            {
+                <option>@c</option>
+            }
+        }
+    </select>
+</form>
+
