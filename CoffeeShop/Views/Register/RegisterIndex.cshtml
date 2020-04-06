@@ -24,6 +24,8 @@
         <option>Yes</option>
         <option>No</option>
     </select>
+    <label>Phone Number: </label><input type="tel" asp-for="Phone" pattern="[-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]" required />
+    <label>Please Leave Some Feedback: </label><input type="text" asp-for="FeedBack" maxlength="100"/>
     <br />
     <br />
     <input type="submit" value="Register Now!" />

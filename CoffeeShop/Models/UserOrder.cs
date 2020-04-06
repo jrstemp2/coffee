@@ -7,10 +7,13 @@ namespace CoffeeShop.Models
 {
     public class UserOrder
     {
-        private int orderNUmber;
+        private int orderNumber;
+        private string userName;
         private string coffeeOrder;
 
-        public int OrderNUmber { get => orderNUmber; set => orderNUmber = value; }
+        public int OrderNumber { get => orderNumber; set => orderNumber = value; }
+        public string UserName { get => userName; set => userName = value; }
         public string CoffeeOrder { get => coffeeOrder; set => coffeeOrder = value; }
+        
     }
 }

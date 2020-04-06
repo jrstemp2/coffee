@@ -17,6 +17,9 @@ namespace CoffeeShop.Models
         private string offers;
         private string userName;
         private string birthDate;
+        private string feedBack;
+        private string phone;
+        
 
         [Required]
         [MinLength(2)]
@@ -45,6 +48,16 @@ namespace CoffeeShop.Models
         [Required]
         [DataType(DataType.Date)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
+        
         public string BirthDate { get => birthDate; set => birthDate = value; }
+        [Required]
+        [MinLength(2)]
+        [MaxLength(100)]
+        public string FeedBack { get => feedBack; set => feedBack = value; }
+        [Required]
+        [MinLength(12)]
+        [MaxLength(12)]
+        public string Phone { get => phone; set => phone = value; }
+        
     }
 }
