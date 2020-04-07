@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JSTEMPOWSKI\\OneDrive - KNEX\\Desktop\\CoffeeShop\\CoffeeShop\\CoffeeShop.csproj": {}
+    "C:\\Users\\JSTEMPOWSKI\\OneDrive - Knex\\Desktop\\CoffeeShop\\CoffeeShop\\CoffeeShop.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JSTEMPOWSKI\\OneDrive - KNEX\\Desktop\\CoffeeShop\\CoffeeShop\\CoffeeShop.csproj": {
+    "C:\\Users\\JSTEMPOWSKI\\OneDrive - Knex\\Desktop\\CoffeeShop\\CoffeeShop\\CoffeeShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JSTEMPOWSKI\\OneDrive - KNEX\\Desktop\\CoffeeShop\\CoffeeShop\\CoffeeShop.csproj",
+        "projectUniqueName": "C:\\Users\\JSTEMPOWSKI\\OneDrive - Knex\\Desktop\\CoffeeShop\\CoffeeShop\\CoffeeShop.csproj",
         "projectName": "CoffeeShop",
-        "projectPath": "C:\\Users\\JSTEMPOWSKI\\OneDrive - KNEX\\Desktop\\CoffeeShop\\CoffeeShop\\CoffeeShop.csproj",
-        "packagesPath": "C:\\Users\\JSTEMPOWSKI\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JSTEMPOWSKI\\OneDrive - KNEX\\Desktop\\CoffeeShop\\CoffeeShop\\obj\\",
+        "projectPath": "C:\\Users\\JSTEMPOWSKI\\OneDrive - Knex\\Desktop\\CoffeeShop\\CoffeeShop\\CoffeeShop.csproj",
+        "packagesPath": "C:\\Users\\JStempowski-\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JSTEMPOWSKI\\OneDrive - Knex\\Desktop\\CoffeeShop\\CoffeeShop\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\JSTEMPOWSKI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\JStempowski-\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -43,9 +43,17 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.35, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.1, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.1, )"
             }
           },
           "imports": [

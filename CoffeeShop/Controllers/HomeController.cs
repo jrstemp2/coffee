@@ -6,20 +6,33 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using CoffeeShop.Models;
+using Microsoft.Extensions.Configuration;
+using System.Data.SqlClient;
+using Dapper;
 
 namespace CoffeeShop.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        IConfiguration ConfigRoot;
+        SqlConnection connection;
 
-        public HomeController(ILogger<HomeController> logger)
+        /*private readonly ILogger<HomeController> _logger;*/
+
+        //public HomeController(ILogger<HomeController> logger)
+        //{
+        //    _logger = logger;
+        //}
+
+        public HomeController(IConfiguration config)
         {
-            _logger = logger;
+            ConfigRoot = config;
+            connection = new SqlConnection(ConfigRoot.GetConnectionString("coffeeShopDB"));
         }
 
         public IActionResult Index()
         {
+            
             return View();
         }
 
