@@ -50,7 +50,7 @@ namespace CoffeeShop.Models
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
         
         public string BirthDate { get => birthDate; set => birthDate = value; }
-        [Required]
+        
         [MinLength(2)]
         [MaxLength(100)]
         public string FeedBack { get => feedBack; set => feedBack = value; }

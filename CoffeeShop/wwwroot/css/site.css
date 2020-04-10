@@ -79,7 +79,12 @@ form {
     display: table;
 }
 
-
+.admin {
+    display: table;
+}
+.btn btn-dark {
+    display: table-cell
+}
 
 label {
     display: table-row;
@@ -98,4 +103,35 @@ input {
     border:solid;
     background-color: lightgrey;
     color: darkblue;
+}
+
+table, th, td {
+    border: 5px solid black;
+    
+}
+
+th, td {
+    padding: 10px;
+}
+
+.control:checked ~ .conditional,
+#required-2:checked ~ .conditional
+#option-2:checked ~ .conditional {
+    clip: auto;
+    
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.control:not(:checked) ~ .conditional,
+#required-2:not(:checked) ~ .conditional,
+#option-2:not(:checked) ~ .conditional {
+    
+    clip: rect(0, 0, 0, 0);
+    
+    overflow: hidden;
+    
+    position: absolute;
+    width: 1px;
 }

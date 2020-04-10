@@ -14,26 +14,40 @@ namespace CoffeeShop.Controllers
     public class ProductController : Controller
     {
         IConfiguration ConfigRoot;
-        SqlConnection connection;
-
+        DAL dal;
         public ProductController(IConfiguration config)
         {
             ConfigRoot = config;
-            connection = new SqlConnection(ConfigRoot.GetConnectionString("coffeeShopDB"));
+            dal = new DAL(ConfigRoot.GetConnectionString("coffeeShopDB"));
         }
+        
         public IActionResult Index()
         {
 
-            string queryString = "SELECT * FROM Products ORDER BY Category";
-            IEnumerable<Product> Products = connection.Query<Product>(queryString);
+            ViewData["Products"] = dal.GetProductCategories();
 
-            ViewData["Products"] = Products;
             return View("ProductIndex");
+        }
+
+        public IActionResult Cat(string cat)
+        {
+            ViewData["Title"] = cat;
+            ViewData["Products"] = dal.GetProductsInCategory(cat);
+
+            return View();
+        }
+
+        public IActionResult Detail(int id)
+        {
+            Product prod = dal.GetProductById(id);
+            ViewData["Title"] = prod.Name;
+            ViewData["Product"] = prod;
+            return View();
         }
 
 
 
 
 
+        }
     }
-}

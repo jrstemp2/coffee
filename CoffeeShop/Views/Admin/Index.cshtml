@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    List<Product> Products = (List<Product>)ViewData["Products"];
+}
+
+<h1>Administrative Menu</h1>
+<h2>Product List</h2>
+@if  (TempData["UserMsg"] != null)
+{
+<p>@TempData["UserMsg"]</p>
+}
+
+<a href="/Admin/AddForm" class=" btn btn-dark">Add a Product</a>
+
+<table>
+    <tr>
+        <th>Product Name</th>
+        <th>Product Category</th>
+        <th>Product Description</th>
+        <th>Product Price</th>
+        <th>Temp</th>
+
+    </tr>
+    @{
+        foreach (Product p in Products)
+        {
+            <tr>
+                <td>@p.Name</td>
+                <td>@p.Category</td>
+                <td>@p.Description</td>
+                <td>@p.Price.ToString("C")</td>
+                <td>@p.Temperature</td>
+
+                <td><a href="/Admin/Edit/@p.Id" class="btn btn-primary">Edit Product</a></td>
+                <td><a href="/Admin/Delete/@p.Id" class="btn btn-primary">Delete Product</a></td>
+            </tr>
+        }
+    }
+
+</table>
+
+
+

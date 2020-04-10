@@ -1,0 +1,32 @@
+﻿@model Product
+
+@{
+    ViewData["Title"] = "Update";
+}
+
+<h1>Update Product</h1>
+
+<form asp-controller="Admin" asp-action="Edit">
+    @Html.LabelFor(m => m.Name)
+    @Html.EditorFor(m => m.Name)
+    <br />
+    @Html.LabelFor(m => m.Price)
+    @Html.EditorFor(m => m.Price)
+    <br />
+    @Html.LabelFor(m => m.Description)
+    @Html.TextAreaFor(m => m.Description)
+    <br />
+    @Html.LabelFor(m => m.Category)
+    @Html.EditorFor(m => m.Category)
+    <br />
+
+    <label>Temperature</label>
+    <select class="form-control" asp-for="Temperature" required>
+        <option>Hot</option>
+        <option>Ice</option>
+        <option>Warm</option>
+    </select>
+
+
+    <input type="submit" value="Edit" class="btn btn-primary" />
+</form>

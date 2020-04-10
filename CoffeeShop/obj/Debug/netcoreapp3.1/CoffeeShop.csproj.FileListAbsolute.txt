@@ -120,3 +120,9 @@ C:\Users\JSTEMPOWSKI\OneDrive - KNEX\Desktop\CoffeeShop\CoffeeShop\bin\Debug\net
 C:\Users\JSTEMPOWSKI\OneDrive - KNEX\Desktop\CoffeeShop\CoffeeShop\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\JSTEMPOWSKI\OneDrive - KNEX\Desktop\CoffeeShop\CoffeeShop\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\JSTEMPOWSKI\OneDrive - KNEX\Desktop\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\CoffeeShop.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\JSTEMPOWSKI\OneDrive - Knex\Desktop\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
+C:\Users\JSTEMPOWSKI\OneDrive - Knex\Desktop\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\Razor\Views\Admin\AddForm.cshtml.g.cs
+C:\Users\JSTEMPOWSKI\OneDrive - Knex\Desktop\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\Razor\Views\Product\Cat.cshtml.g.cs
+C:\Users\JSTEMPOWSKI\OneDrive - Knex\Desktop\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\Razor\Views\Product\Detail.cshtml.g.cs
+C:\Users\JSTEMPOWSKI\OneDrive - Knex\Desktop\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Edit.cshtml.g.cs
+C:\Users\JSTEMPOWSKI\OneDrive - Knex\Desktop\CoffeeShop\CoffeeShop\obj\Debug\netcoreapp3.1\Razor\Views\Shared\NoSuchItem.cshtml.g.cs
